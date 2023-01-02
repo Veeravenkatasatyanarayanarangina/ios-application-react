@@ -2,7 +2,7 @@ import axios from 'axios';
 // import e from 'cors';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-
+import {baseUrl}  from '../Utils/Api/Api'
 const StudentRegister = () => {
 
   //const [resume, setResume] = useState([]);
@@ -38,18 +38,19 @@ const StudentRegister = () => {
    //setApplicantModel({ ...applicantModel, [e.target.name]: e.target.value });
 
   }
-  const onChangeResume = (e)=>
-  {
-    const formdata = new FormData();
-    formdata.append('file',e.target.files[0])
-
-    setApplicantModel({...applicantModel,[e.target.name]:formdata})
-  }
+  
 const onSubmitform=(e)=>
 {
+
   e.preventDefault();
-  axios.post("http://localhost:8088/save",applicantModel).then((response)=>{
+  console.log(applicantModel.applicantDepartment);
+  axios.post(baseUrl+'/save',applicantModel).then((response)=>{
     console.log(response.data)
+    const res = response.data;
+
+      alert("successfully registered and email sent to ",response.data.applicantEmail)
+      navigate('/')
+    
   }
   ).catch=(error)=>
   {
@@ -177,10 +178,10 @@ const onSubmitform=(e)=>
                       required
                     >
                       <option value="">Select Qualification</option>
-                      <option value="btech">BE/BTECH</option>
-                      <option value="me">ME/MTECH</option>
-                      <option value="mca">MCA/MASTERS</option>
-                      <option value="bsc">BSC/BSA</option>
+                      <option value="BE/BTECH">BE/BTECH</option>
+                      <option value="ME/MTECH">ME/MTECH</option>
+                      <option value="MCA/MASTERS">MCA/MASTERS</option>
+                      <option value="BSC/BCA">BSC/BCA</option>
                       <option value="others">others</option>
                     </select>
                   </div>
@@ -201,14 +202,14 @@ const onSubmitform=(e)=>
                       required
                     >
                       <option value="">Select Year of PassOut</option>
-                      <option value="1">2016</option>
-                      <option value="2">2017</option>
-                      <option value="3">2018</option>
-                      <option value="4">2019</option>
-                      <option value="5">2020</option>
-                      <option value="6">2021</option>
-                      <option value="7">2022</option>
-                      <option value="8">others</option>
+                      <option value="2016">2016</option>
+                      <option value="2017">2017</option>
+                      <option value="2018">2018</option>
+                      <option value="2019">2019</option>
+                      <option value="2020">2020</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                      <option value="pursuing">pursuing</option>
                     </select>
                   </div>
                   <div className="col-md-6">
@@ -228,11 +229,11 @@ const onSubmitform=(e)=>
                       required
                     >
                       <option value="">Select Department </option>
-                      <option value="java">JAVA</option>
-                      <option value="ui">UI/UX</option>
-                      <option value="devops">DEVOPS</option>
-                      <option value="data">DATA ENGINEER</option>
-                      <option value="data">QA</option>
+                      <option value="JAVA">JAVA</option>
+                      <option value="UI/UX">UI/UX</option>
+                      <option value="DEVOPS">DEVOPS</option>
+                      <option value="DATA ENGINEERS">DATA ENGINEER</option>
+                      <option value="QA">QA</option>
                       <option value="others">others</option>
                     </select>
                   </div>
@@ -327,7 +328,7 @@ const onSubmitform=(e)=>
                   </div>
 
                   <div className="col-6 d-grid mx-auto mt-5 mb-3">
-                    <button onClick={navigateTohomepage}
+                    <button 
                       type="submit"
                       className="btn text-white"
                       style={{
@@ -349,3 +350,5 @@ const onSubmitform=(e)=>
   )
 }
 export default StudentRegister
+
+

@@ -88,7 +88,7 @@ const Home = () => {
               </div>
               <div className="dropdown mx-4">
                 <button className="btn btn-primary-light" type="button" onClick={navigateToStudentLogin}>
-                  Login as A Student
+                  Login as A Applicant
                 </button>
                 
               </div>

@@ -6,9 +6,13 @@ const InterviewerDashboard = () => {
    
   return (
     <>
-    <div className="card shadow my-4 sidebar-patient">
-      <div className="card-body p-1">
-        <div className="profile text-center mt-3">
+    <nav className='sidenav shadow-right sidenav-light'>
+    <div className='sidenav-menu'>
+
+<div className='profile text-center '>
+    <div className="card shadow sidebar-patient" style={{width:"300px"}}>
+      <div className="card-body ">
+        <div className="profile text-center " >
          
           <div className="my-3">
             <h4>InterviewerDashboard</h4>
@@ -19,7 +23,7 @@ const InterviewerDashboard = () => {
 
 
             <li className="nav-item p-1">
-              <NavLink className="nav-link" to="/">
+              <NavLink className="nav-link" to="/studentsinfo">
                 <i className="bi bi-calendar-check-fill m-2"></i> Students Info
                 
               </NavLink>
@@ -83,6 +87,9 @@ const InterviewerDashboard = () => {
         </div>
       </div>
     </div>
+    </div>
+    </div>
+    </nav>
   </>
   )
 }
