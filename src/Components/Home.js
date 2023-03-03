@@ -56,30 +56,9 @@ const Home = () => {
           >
             {  (
               <>
-              <ul className="navbar-nav mx-auto">
-                <li className="nav-item  mx-2">
-                  <NavLink
-                    className="nav-link text-dark fw-bold"
-                    to=""
-
-                  >
-                    How it works
-                  </NavLink>
-                </li>
-                <li className="nav-item mx-2">
-                  <NavLink
-                    className="nav-link text-dark fw-bold "
-                    to=""
-
-                  >
-                    About us
-                  </NavLink>
-                </li>
-              </ul>
-              <div className="d-flex align-items-center">
-              <div>
-                <a style={{ color: "#EE6F1B" }} href="/" className="text-decoration-none fw-bold">999-888- 3394</a>
-              </div>
+            
+              <div className="d-flex align-items-center justify-content-end">
+             
               <div className="dropdown mx-4">
                 <button className="btn btn-primary-light" type="button" onClick={navigateToStudentRegister}>
                   Registration

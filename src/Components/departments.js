@@ -52,7 +52,7 @@ const Departments = () => {
         
   return (
     <section className="departments">
-      <div className="container ">
+      <div className="container-fluid ">
         <div className="row">
           <div className="col-md-3">
           <InterviewerDashboard />
@@ -71,16 +71,16 @@ const Departments = () => {
 
                 {
         (listofCount.map((list)=>(
-          <div className="col-sm-6 ">
+          <div className="col-sm-4 ">
           <div className="card mt-4  shadow mx-4"
         >
-            <button className="btn btn-light"
+            <button className="btn shadow"  style={{ backgroundColor: '#EE6F1B', borderColor: '#EE6F1B', color:'#fff' }}
                onClick={
                 ()=>{
                   handleDetails(list.departmentName)
                 }
                }>
-                 get Details</button>
+                 Get Details</button>
               <div
                 className="card-body"
                
@@ -102,12 +102,11 @@ const Departments = () => {
             <p className="card-text">Total Number of Applicants.,{list.noOfCandidates}</p> */}
 
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-            
-{
+                <hr/>
+                <div className="row mt-5">
+                  <div className="col-md-12">
+                    <>
+                    {
             applicantDetails.length>0 &&
                <div className="table-responsive-sm">
                <table className="table">
@@ -146,6 +145,15 @@ const Departments = () => {
              </div>
               
             }
+                    </>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+            
+
         </div>
     </section>
   );

@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { baseUrl } from '../Utils/Api/Api';
-import StudentDashboard from './StudentDashboard'
+
 
 const StudentLogin = () => {
   const navigate=useNavigate();
@@ -35,14 +35,12 @@ const StudentLogin = () => {
       <section className="stu-login px-2">
 
         <div className="container">
-          <div className='row d-flex justify-content-center py-5' style={{ border: '1px solid rgba(0,0,0,0.2)', borderRadius: '20px' }}>
-            <div className="col-lg-5 col-md-6 col-sm-6 col-12 login-left">
-              
-            </div>
-            <div className="col-lg-5 col-md-6 col-sm-6 col-12 login-right">
+          <div className='row d-flex justify-content-center py-5' >
+         
+            <div className="col-lg-6 col-md-6 col-sm-6 col-12 login-right shadow" style={{ border: '1px solid rgba(0,0,0,0.2)', borderRadius: '20px' }}>
               <div className="p-5">
                 <div className="">
-                  <h2 className="text-center"><span style={{ color: "#EE6F1B", marginRight: '0.5rem' }}>Student</span>Login</h2>
+                  <h2 className="text-center"><span style={{ color: "#EE6F1B", marginRight: '0.5rem' }}>Applicant</span>Login</h2>
                   <form className="mt-4 was-validated" 
                   onSubmit={onSubmitForm}>
                     <div className="mb-3">
@@ -77,7 +75,7 @@ const StudentLogin = () => {
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         required
                       />
-                      
+
                       <div class="valid-feedback">Valid.</div>
                       <div class="invalid-feedback">Please fill out this field.</div>
                     </div>

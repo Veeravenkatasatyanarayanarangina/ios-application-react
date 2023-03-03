@@ -47,13 +47,14 @@ const onSubmitform=(e)=>
   axios.post(baseUrl+'/save',applicantModel).then((response)=>{
     console.log(response.data)
     const res = response.data;
-
-      alert("successfully registered and email sent to ",response.data.applicantEmail)
+      res.includes('already')?alert(res):
+      alert("successfully registered and email sent to "+res.applicantEmail)
       navigate('/')
-    
   }
   ).catch=(error)=>
   {
+    alert("you already registerd")
+    
     console.log(error.message);
   }
 

@@ -10,8 +10,8 @@ const InterviewerDashboard = () => {
     <div className='sidenav-menu'>
 
 <div className='profile text-center '>
-    <div className="card shadow sidebar-patient" style={{width:"300px"}}>
-      <div className="card-body ">
+    <div className="shadow sidebar-patient">
+      <div>
         <div className="profile text-center " >
          
           <div className="my-3">

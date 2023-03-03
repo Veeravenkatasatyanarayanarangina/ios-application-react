@@ -18,9 +18,9 @@ const InterviewerLogin = () => {
     axios.post(baseUrl+'/managerlogin',admin).then((response)=>
     {
       console.log(response.data)
-     
+      
        
-        navigate("/interviewerdashboard")
+        navigate("/departments")
     })
 
   }
@@ -32,11 +32,9 @@ const InterviewerLogin = () => {
       <section className="interviwer-login px-2">
 
         <div className="container">
-          <div className='row d-flex justify-content-center py-5' style={{ border: '1px solid rgba(0,0,0,0.2)', borderRadius: '20px' }}>
-            <div className="col-lg-5 col-md-6 col-sm-6 col-12 login-left">
-              
-            </div>
-            <div className="col-lg-5 col-md-6 col-sm-6 col-12 login-right">
+          <div className='row d-flex justify-content-center py-5' >
+          
+            <div className="col-lg-6 col-md-8 col-sm-12 col-12 login-right shadow" style={{ border: '1px solid rgba(0,0,0,0.2)', borderRadius: '20px' }}>
               <div className="p-5">
                 <div className="">
                   <h2 className="text-center"><span style={{ color: "#EE6F1B", marginRight: '0.5rem' }}>Interviewer</span>Login</h2>

@@ -4,7 +4,7 @@ const Departments = () => {
   return (
 
     <section classNameName='departments'>
-      <div classNameName='container '>
+      <div classNameName='container-fluid '>
         <div classNameName='row g-3'>
           <div classNameName='col-lg-4'>
             <div className='card shadow-lg p-3 mb-5 bg-body rounded mt-4 p-5'>
